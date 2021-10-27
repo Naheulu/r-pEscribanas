@@ -2,7 +2,15 @@
     box-sizing: border-box;
 }
 body{
-    overflow-x: hidden; 
+    overflow-x: hidden;     
+}
+html{
+    width: 100%;
+}
+@media (max-width: 460px){
+    body{
+        margin-right: -10px;
+    }
 }
 h1, h2{
     font-family: 'Playfair';    
@@ -212,6 +220,11 @@ nav .nav-item a:hover{
 .s01 h1{
     color: white;
 }
+@media (max-width: 460px){
+    .s01 h1{
+        font-size: 25px;
+    }
+}
 
 /* Seccion 2 */
 .s02 {
@@ -250,12 +263,13 @@ nav .nav-item a:hover{
 /* Primera seccion (arboles) */
 .quienes{
     background-image: url(img/forest4.png);
-    background-size: cover;
+    background-size: cover;    
 }
 #heads03{
     background-image: url(img/forest3.png);
     background-size: cover;
     height: 120px;
+    
 }
 .quienes p{
     color: white;
@@ -264,6 +278,11 @@ nav .nav-item a:hover{
     padding: 15px;
     margin-top: 160px;      
     width: 400px;
+}
+@media (max-width: 460px){
+    .quienes p{           
+        width: 300px;
+    }    
 }
 .quienes p, .quienes img{
     margin-left: -60px;  
