@@ -1,0 +1,444 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden; 
+}
+h1, h2{
+    font-family: 'Playfair';    
+    font-size: 55px;
+    letter-spacing: 2px; 
+} 
+h3{
+    font-size: 40px;
+    font-family: 'Playfair';
+    letter-spacing: 2px;
+}
+@media (max-width: 992px){
+    h1, h2{
+        font-size: 40px; 
+    }
+}
+
+.rombo-medio{
+    background-color: #844a2c;
+    height: 25px;
+    width: 25px;
+    transform: rotate(45deg);
+}
+.rombo-medio-alt{
+    background-color: white;
+    height: 25px;
+    width: 25px;
+    transform: rotate(45deg);
+}
+.rombo-chico{
+    background-color: #844a2c;
+    transform: rotate(45deg);
+    height: 10px;
+    width: 10px;
+}
+.rombo-chico-alt{
+    background-color: white;
+    transform: rotate(45deg);
+    height: 10px;
+    width: 10px;
+}
+.subtitulo{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #844a2c;
+}
+.cuerpo{
+    font-family: 'Playfair';    
+    font-size: 12px;
+    color: #636363;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+}
+button{
+    background-color: #844a2c;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    padding: 10px;
+    letter-spacing: 2px;
+    border: none;   
+    transition: .3s ease all; 
+    position: relative;
+    overflow: hidden;
+}
+button span{
+    z-index: 2;
+    position: relative;
+    transition: .3s ease all;
+}
+.main-button::after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0px;
+    top: -80px;
+    z-index: 1;
+    transition: .3s ease-in-out all;
+}
+.main-button:hover::after{
+    top: 0px;    
+}
+.main-button:hover{    
+    color: #844a2c;    
+}
+
+/* Navbar */
+nav{
+    background-color: #420f0f;
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 14px;    
+    box-shadow: 1px 1px 5px black;
+    overflow: hidden;
+    transition: .2s ease-in-out all;
+    --var-effect: -115px;    
+}
+/* Efecto blanco de scroll navbar */
+nav::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    left: 0px;
+    top: var(--var-effect);
+    z-index: -1;
+    transition: .2s ease-in-out all;
+}
+
+/* Ajustar efecto scroll en mobile */
+@media (min-width: 768px){
+    nav{
+        height: 110px;
+    }    
+}
+@media (max-width: 760px){
+    nav::after{
+        visibility: hidden;
+    }   
+}
+
+
+nav .brandLogo{
+    width: 200px;
+    z-index: 2;
+    
+}
+
+nav li{
+    margin-right: 15px;       
+    font-weight: 200;       
+}
+nav li:first-child a{
+    color: #844a2c;
+    font-weight: 400;    
+} 
+nav a{
+    color: white;    
+    z-index: 2;
+    
+}
+nav .nav-item{
+    position: relative;
+}
+/* nav .nav-item a:hover{
+    color: #c2c2c2;  
+    text-decoration: underline #844a2c 2px ;  
+    -webkit-text-underline-position: under;
+    -ms-text-underline-position: below;
+    text-underline-position: under; 
+} */
+nav li:first-child a:hover{
+    color: #844a2c;    
+}
+
+/* Efecto de elementos en navbar, solo en escritorio */
+@media (min-width: 1024px){
+    nav .nav-item a::after{
+        content: '';
+        height: 3px;
+        width: 25px;
+        bottom: 3px;
+        left: 8px;
+        background-color: #844a2c;
+        position: absolute;
+        transition: .2s ease-in-out;
+    }
+    nav .nav-item a:hover::after{    
+        width: 80%;        
+        transition: .2s ease-in-out;
+    }   
+}
+nav .nav-item a:hover{
+    color: #c2c2c2;
+}
+
+
+
+
+
+/* Seccion 1 */
+.s01 .row{
+    margin-top: 110px;
+    transition: .2s ease-in-out all;
+    
+}
+.s01 .titulo{
+    background-color: #380d0d;
+    background-image: url(img/forest.png);
+    background-size: cover;
+    background-repeat: no-repeat;           
+    background-position-y: 110px;   
+    background-attachment: fixed;  
+    padding: 120px;
+    
+}
+
+.s01 .portada{
+    background-image: url(img/img01.jpg);
+    background-size: cover;    
+    background-repeat: no-repeat;    
+}
+.s01 h1{
+    color: white;
+}
+
+/* Seccion 2 */
+.s02 {
+    margin: 120px 0px 120px 0px;
+}
+.s02 h2{
+    color: #420f0f;
+}
+.s02 article{
+    margin: 20px 0px 20px 0px;
+}
+.s02 .iconos{
+    width: 50px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;    
+}
+.s02 .subtitulo{
+    text-align: center;
+}
+.s02 .separador{
+    width: 50%;
+    height: 1px;
+    background-color: #b7b7b7;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+.s02 .resaltado{
+    color: #380d0d;
+    font-weight: bolder;
+}
+
+/* Seccion 3 */
+/* Primera seccion (arboles) */
+.quienes{
+    background-image: url(img/forest4.png);
+    background-size: cover;
+}
+#heads03{
+    background-image: url(img/forest3.png);
+    background-size: cover;
+    height: 120px;
+}
+.quienes p{
+    color: white;
+    font-family: 'Playfair';
+    font-size: 12px;
+    padding: 15px;
+    margin-top: 160px;      
+    width: 400px;
+}
+.quienes p, .quienes img{
+    margin-left: -60px;  
+}
+.quienes h2{
+    color: #2d0a0a;
+    margin-left: -20px;     
+}
+.quienes img{
+    width: 150px;
+}
+/* Ajustar fondo */
+@media (max-width: 992px){
+    .quienes{
+        background-image: none;
+        background-color:#844a2c;
+    }
+    .quienes p, .quienes h2, .quienes img{
+        margin-left: 0px;
+        text-align: center;
+    }
+    .quienes p{        
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .quienes img{
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+    }
+}
+
+/* Segunda seccion (fotos) y descripcion */
+.s03 .descripcion{
+    margin-top: -30px;
+    background-color: white;
+}
+.s03 h3{
+    color: #636363;
+}
+.descripciones{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    background-color: white;
+    align-items: baseline;
+    padding: 15px;
+    width: 50%;
+    position: absolute;
+    bottom: -100px;
+    transition: .3s ease-in-out all;
+}
+.name, .srname, .dcrp{
+    font-family: 'Montserrat';
+}
+.name{
+    font-size: 20px;
+    color: #380d0d;
+}
+.srname{
+    font-size: 15px;
+    color: #844a2c;
+}
+.dcrp{
+    font-size: 15px;
+    color: #636363;
+}
+
+@media (max-width: 992px){
+    .imagen-uno, .imagen-dos{
+        overflow: visible;
+    }
+    .descripciones{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        background-color: white;
+        align-items: baseline;
+        padding: 15px;
+        width: 100%;        
+    }
+
+}
+
+/* Seccion 4 */
+.contacto h3{
+    color:#420f0f;
+}
+.formulario input, .formulario textarea{
+    font-family: 'Montserrat';
+    font-size: 12px;
+    background-color: #f0f0f0;  
+    border: none;     
+}
+.formulario input::placeholder, .formulario textarea::placeholder{
+    color: #aaaaaa;
+}
+.formulario .boton-enviar:hover{
+    background-color: #420f0f;
+}
+.datos{
+    font-family: 'Montserrat';
+    background-color: white;
+    box-shadow: -10px 5px 15px #00000069;  
+    margin-top: 120px; 
+}
+.datos p{
+    color: #420f0f;
+    font-weight: bold;
+    font-size: 20px;
+}
+.datos span{
+    color: #636363;
+    font-size: 15px;
+}
+@media (max-width: 760px){
+    .datos{        
+        margin-top: 50px; 
+    }       
+}
+@media (max-width: 992px){
+    .rm{
+        padding-top: 100px;
+    } 
+}
+
+
+/* Seccion 5 */
+footer{
+    background-color: #420f0f;    
+    margin-top: -170px;
+    margin-right: -20px;
+}
+.pie{
+    padding-bottom: 200px;
+}
+.pie h2, .pie p{
+    color: white;
+}
+.pie h2{
+    font-size: 75px;
+    line-height: 65px;
+    letter-spacing: 4px;
+}
+.pie p{
+    font-family: 'Playfair';
+    width: 50%;
+    text-align: justify;
+}
+.pie img{
+    width: 100px;
+}
+@media (max-width: 760px){
+    footer{
+        margin-top: 50px;
+    }    
+    .pie p{        
+        width: 75%;
+    }  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
